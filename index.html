@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Generador de Excusas</title>
+</head>
+<body>
+    <h1>Generador de Excusas</h1>
+    <p id="excuse">Presiona el botón para obtener una excusa</p>
+    <button onclick="generateExcuse()">Generar Excusa</button>
+
+    <script>
+        function generateExcuse() {
+            const subjects = ["Mi perro", "El profesor", "Mi abuela", "Un extraterrestre", "Un fantasma"];
+            const actions = ["se comió", "perdió", "rompió", "se llevó", "destruyó"];
+            const objects = ["mi tarea", "mi coche", "mi computadora", "mi mochila", "mi zapato"];
+            const places = ["en casa", "en la escuela", "en el parque", "en la calle", "en el supermercado"];
+            
+            let excuse = `${randomItem(subjects)} ${randomItem(actions)} ${randomItem(objects)} ${randomItem(places)}.`;
+            document.getElementById("excuse").textContent = excuse;
+        }
+
+        function randomItem(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+    </script>
+</body>
+</html>

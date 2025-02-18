@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+#excuse {
+    font-size: 24px;
+    margin: 20px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
